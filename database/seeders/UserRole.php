@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
+class UserRole extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table("users")->insert([
+            'username' =>'coba',
+            'name'=> 'coba coba',
+            'email'=> 'coba@admin.com',
+            'role'=> 'user',
+            'password'=> Hash::make('password'),
+           ]);
+    }
+}
